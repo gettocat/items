@@ -1,6 +1,8 @@
 # items lib
 Minimalistic js library to manage items list.
 
+![Items preview](/preview.png)
+
 ### Installation
 * add to you page items.css and items.js
 * init library:
