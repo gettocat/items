@@ -1,5 +1,5 @@
 # items lib
-Minimalistic js library to manage items list.
+Minimalistic js library to manage items list. [View live demo](http://gettocat.github.io/items/)
 
 ![Items preview](/preview.png)
 
