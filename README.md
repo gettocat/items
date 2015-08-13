@@ -72,10 +72,13 @@ itms.getAllSelectedAttr('id', function(arr){
 
 ### Advanced usage
 If you need a more then one list on page, use this code:
+```js
 var itm11 = new items("#tags");//#tag its a selector, where search elements of this list, by default - document.
 var itms2 = new items("#categoryes");
+```
 
 ### Constructor params
+```js
 var itm1 = new items("#tags", {
   scope: "Selected items: ",//text of footer items. 
   item_selector: '.item',//selector of one item
@@ -83,4 +86,4 @@ var itm1 = new items("#tags", {
   header_selector: ".item-header",//list header selector
   footer_selector: ".item-footer",//list footer selector
 });
-
+```
