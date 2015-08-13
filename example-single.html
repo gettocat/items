@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Example of js lib "items"</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/items.css" />
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <script type="text/javascript">
+            var itms;
+        </script>
+    </head>
+    <body>
+
+        <div id="page-inner" class="container">
+            <h3>List of posts </h3>
+
+            <div class="item-header row">
+                <a href="#" onclick="return itms.selectAll()" class="btn btn-primary">Select all</a>
+                <a href="#" onclick="return itms.unselectAll()" class="btn btn-primary">Clear selection</a>
+                <a href="#" onclick="return delSelected()" class="hideOnEmptySelection hide btn btn-danger">Delete selected</a>
+                <a href="#" onclick="return archiveSelected()" class="hideOnEmptySelection hide btn btn-warning">Archive selected</a>
+                <a href="#" onclick="return draftSelected()" class="hideOnEmptySelection hide btn btn-warning">Draft selected</a>
+            </div>
+
+            <div data-id="28" class="item row">
+
+                <div class="col-md-6">
+                    <a href="#post1">20 уроков бизнес миллиардера Джона Рокфеллера</a>
+                </div>
+                <div class="col-md-4 status">
+
+                    <span class="label label-success">Publicated: 17 aug in 12:00:41</span>
+                </div>
+                <div class="col-md-2">
+                    <!-- Single button -->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Actions <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a onclick="itms.select($(this).closest('.item'));
+                                    return archiveSelected();" href="#">Archive</a></li>
+                            <li><a onclick="itms.select($(this).closest('.item'));
+                                    return draftSelected();" href="#">Make Draft</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a onclick="itms.select($(this).closest('.item'));
+                                    return delSelected();" href="#">Remove</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div data-id="24" class="item row">
+
+                <div class="col-md-6">
+                    <a href="#post2">Если в 35 лет вы все еще бедны — вы это заслужили. Советы по бизнесу от Джека Ма</a>
+                </div>
+                <div class="col-md-4 status">
+
+                    <span class="label label-success">Publicated: 16 aug in 18:00:24</span>
+                </div>
+                <div class="col-md-2">
+                    <!-- Single button -->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Actions <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a onclick="itms.select($(this).closest('.item'));
+                                    return archiveSelected();" href="#">Archive</a></li>
+                            <li><a onclick="itms.select($(this).closest('.item'));
+                                    return draftSelected();" href="#">Make Draft</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a onclick="itms.select($(this).closest('.item'));
+                                    return delSelected();" href="#">Remove</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div data-id="15" class="item row">
+
+                <div class="col-md-6">
+                    <a href="#post3">7 наиболее распространенных жестов обмана</a>
+                </div>
+                <div class="col-md-4 status">
+
+                    <span class="label label-success">Publicated: 16 aug in 12:00:16</span>
+                </div>
+                <div class="col-md-2">
+                    <!-- Single button -->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Actions <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a onclick="itms.select($(this).closest('.item'));
+                                    return archiveSelected();" href="#">Archive</a></li>
+                            <li><a onclick="itms.select($(this).closest('.item'));
+                                    return draftSelected();" href="#">Make Draft</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a onclick="itms.select($(this).closest('.item'));
+                                    return delSelected();" href="#">Remove</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div data-id="19" class="item row">
+
+                <div class="col-md-6">
+                    <a href="#post4">Как успеть сделать всю работу до обеда</a>
+                </div>
+                <div class="col-md-4 status">
+
+                    <span class="label label-success">Publicated: 15 aug in 18:00:24</span>
+                </div>
+                <div class="col-md-2">
+                    <!-- Single button -->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Actions <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a onclick="itms.select($(this).closest('.item'));
+                                    return archiveSelected();" href="#">Archive</a></li>
+                            <li><a onclick="itms.select($(this).closest('.item'));
+                                    return draftSelected();" href="#">Make Draft</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a onclick="itms.select($(this).closest('.item'));
+                                    return delSelected();" href="#">Remove</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div data-id="10" class="item row">
+
+                <div class="col-md-6">
+                    <a href="#post5">Стратегия достижения целей в бизнесе и личной жизни</a>
+                </div>
+                <div class="col-md-4 status">
+
+                    <span class="label label-success">Publicated: 15 aug in 12:00:32</span>
+                </div>
+                <div class="col-md-2">
+                    <!-- Single button -->
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Actions <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a onclick="itms.select($(this).closest('.item'));
+                                    return archiveSelected();" href="#">Archive</a></li>
+                            <li><a onclick="itms.select($(this).closest('.item'));
+                                    return draftSelected();" href="#">Make Draft</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a onclick="itms.select($(this).closest('.item'));
+                                    return delSelected();" href="#">Remove</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-footer row"></div>
+
+
+        </div>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+        <script src="assets/items.js"></script>
+        <script type="text/javascript">
+                                $(function() {
+                                    itms = new items();
+                                    itms.onHasSelected(function() {
+                                        $(".hideOnEmptySelection").removeClass("hide");
+                                    });
+
+                                    itms.onHasNoSelected(function() {
+                                        $(".hideOnEmptySelection").addClass("hide");
+                                    });
+
+                                });
+
+
+                                function delSelected() {
+                                    if (!confirm("Are you sure?"))
+                                        return false;
+
+                                    itms.getSelected(function(el) {
+                                        var id = $(el).data("id");
+
+                                        //async request. Server return you status of deletion:
+                                        fake_ajax(function(resp) {
+                                            itms.unselect(el);
+                                            if (resp.status == 1)
+                                                $(el).remove();
+
+                                        });
+
+                                    });
+
+                                    return false;
+                                }
+
+                                function archiveSelected() {
+                                    itms.getSelected(function(el) {
+                                        var id = $(el).data("id");
+
+
+                                        //async request. Server return you status of archiving
+                                        fake_ajax(function(resp) {
+                                            if (resp.status == 1) {
+                                                itms.unselect(el);
+                                                $(el)
+                                                        .css({
+                                                            "background-color": "#f0ad4e",
+                                                            "opacity": ".5"
+                                                        })
+                                                        .find(".btn-group")
+                                                        .remove()
+                                                        .end()
+                                                        .find(".status")
+                                                        .html("<span class='label label-danger'>in archive</span>");
+                                            } else
+                                                itms.unselect(el);
+                                        });
+
+                                    });
+
+                                    return false;
+                                }
+
+                                function draftSelected() {
+                                    itms.getSelected(function(el) {
+                                        var id = $(el).data("id");
+
+
+                                        //async request. Server return you status of archiving
+                                        fake_ajax(function(resp) {
+
+                                            if (resp.status == 1) {
+                                                itms.unselect(el);
+                                                $(el)
+                                                        .css({
+                                                            "background-color": "#87cff3",
+                                                            "opacity": ".5"
+                                                        })
+                                                        .find(".btn-group")
+                                                        .remove()
+                                                        .end()
+                                                        .find(".status")
+                                                        .html("<span class='label label-primary'>draft</span>");
+                                            } else
+                                                itms.unselect(el);
+
+                                        });
+
+                                    });
+
+                                    return false;
+                                }
+
+                                function fake_ajax(cb) {
+                                    setTimeout(function(cb) {
+                                        cb({status: 1});
+                                    }, Math.random() * (1000 - 100) + 100, cb)
+                                }
+
+        </script>
+
+    </body>
+</html>

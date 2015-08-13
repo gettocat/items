@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Example of js lib "items"</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/items.css" />
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <script type="text/javascript">
+            var itms, itms2;
+        </script>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 col-sm-12">
+
+                    <h3>Category</h3>
+                    <div id="cats" class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Using (6)</h3>
+                        </div>
+                        <div class="panel-body">
+
+                            <div class="item-header row">
+                                <a href="#" onclick="return itms.selectAll()" class="btn btn-primary">Select all</a>
+                                <a href="#" onclick="return itms.unselectAll()" class="btn btn-primary">Clear selection</a>
+                                <a href="#" onclick="return delSelectedCat()" class="hideOnEmptySelection btn btn-danger hide">Delete selected</a>
+                                <a href="#" onclick="return recalcSelectedCat()" class="hideOnEmptySelection btn btn-warning hide">Recalculate</a>
+
+                            </div>
+                            <div data-id="2" class="item row">
+
+                                <div class="col-md-4">
+                                    Video / video                        
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="usages">Usages: 4</span><br>
+                                    <a href="#" onclick="itms.select($(this).closest('.item'));
+                                            return recalcSelectedCat();" class="btn btn-warning">Recalculate</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="#" onclick="itms.select($(this).closest('.item'));
+                                            return delSelectedCat();" class="btn btn-danger">Delete</a>
+                                </div>
+                            </div>
+                            <div data-id="6" class="item row">
+
+                                <div class="col-md-4">
+                                    Science / nauka                        
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="usages">Usages: 2</span><br>
+                                    <a href="#" onclick="itms.select($(this).closest('.item'));
+                                            return recalcSelectedCat();" class="btn btn-warning">Recalculate</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="#" onclick="itms.select($(this).closest('.item'));
+                                            return delSelectedCat();" class="btn btn-danger">Delete</a>
+                                </div>
+                            </div>
+                            <div data-id="5" class="item row">
+
+                                <div class="col-md-4">
+                                    Suggested news / predlozhennye-novosti                        
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="usages">Usages: 1</span><br>
+                                    <a href="#" onclick="itms.select($(this).closest('.item'));
+                                            return recalcSelectedCat();" class="btn btn-warning">Recalculate</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="#" onclick="itms.select($(this).closest('.item'));
+                                            return delSelectedCat();" class="btn btn-danger">Delete</a>
+                                </div>
+                            </div>
+                            <div data-id="14" class="item row">
+
+                                <div class="col-md-4">
+                                    Test / test                        
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="usages">Usages: 1</span><br>
+                                    <a href="#" onclick="itms.select($(this).closest('.item'));
+                                            return recalcSelectedCat();" class="btn btn-warning">Recalculate</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="#" onclick="itms.select($(this).closest('.item'));
+                                            return delSelectedCat();" class="btn btn-danger">Delete</a>
+                                </div>
+                            </div>
+                            <div data-id="8" class="item row">
+
+                                <div class="col-md-4">
+                                    Humor / yumor                        
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="usages">Usages: 0</span><br>
+                                    <a href="#" onclick="itms.select($(this).closest('.item'));
+                                            return recalcSelectedCat();" class="btn btn-warning">Recalculate</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="#" onclick="itms.select($(this).closest('.item'));
+                                            return delSelectedCat();" class="btn btn-danger">Delete</a>
+                                </div>
+                            </div>
+                            <div data-id="10" class="item row">
+
+                                <div class="col-md-4">
+                                    IT / it                      
+                                </div>
+                                <div class="col-md-4">
+                                    <span class="usages">Usages: 0</span><br>
+                                    <a href="#" onclick="itms.select($(this).closest('.item'));
+                                            return recalcSelectedCat();" class="btn btn-warning">Recalculate</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="#" onclick="itms.select($(this).closest('.item'));
+                                            return delSelectedCat();" class="btn btn-danger">Delete</a>
+                                </div>
+                            </div>
+
+                            <div class="item-footer row"></div>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="col-md-6 col-sm-12">
+
+                    <h3>Tags</h3>
+                    <div id="tags" class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Using (17)</h3>
+                        </div>
+                        <div class="panel-body">
+
+                            <div class="item-header row">
+                                <a href="#" onclick="return itms2.selectAll()" class="btn btn-primary">Select all</a>
+                                <a href="#" onclick="return itms2.unselectAll()" class="btn btn-primary">Clear selection</a>
+                                <a href="#" onclick="return delSelectedTag()" class="hideOnEmptySelection2 hide btn btn-danger">Delete selected</a>
+                                <a href="#" onclick="return recalcSelectedTag()" class="hideOnEmptySelection2 hide btn btn-warning">Recalculate</a>
+
+                            </div>
+                            <div data-id="21" class="item row">
+
+                                <div class="col-md-4">
+                                    js / js                        </div>
+                                <div class="col-md-4">
+                                    <span class="usages">Usages: 2</span><br>
+                                    <a href="#" onclick="itms2.select($(this).closest('.item'));
+                                            return recalcSelectedTag();" class="btn btn-warning">Recalculate</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="#" onclick="itms2.select($(this).closest('.item'));
+                                            return delSelectedTag();" class="btn btn-danger">Delete</a>
+                                </div>
+                            </div>
+                            <div data-id="20" class="item row">
+
+                                <div class="col-md-4">
+                                    php / php                        </div>
+                                <div class="col-md-4">
+                                    <span class="usages">Usages: 2</span><br>
+                                    <a href="#" onclick="itms2.select($(this).closest('.item'));
+                                            return recalcSelectedTag();" class="btn btn-warning">Recalculate</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="#" onclick="itms2.select($(this).closest('.item'));
+                                            return delSelectedTag();" class="btn btn-danger">Delete</a>
+                                </div>
+                            </div>
+                            <div data-id="23" class="item row">
+
+                                <div class="col-md-4">
+                                    css / css                        </div>
+                                <div class="col-md-4">
+                                    <span class="usages">Usages: 1</span><br>
+                                    <a href="#" onclick="itms2.select($(this).closest('.item'));
+                                            return recalcSelectedTag();" class="btn btn-warning">Recalculate</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="#" onclick="itms2.select($(this).closest('.item'));
+                                            return delSelectedTag();" class="btn btn-danger">Delete</a>
+                                </div>
+                            </div>
+                            <div data-id="22" class="item row">
+
+                                <div class="col-md-4">
+                                    cpp / cpp                        </div>
+                                <div class="col-md-4">
+                                    <span class="usages">Usages: 1</span><br>
+                                    <a href="#" onclick="itms2.select($(this).closest('.item'));
+                                            return recalcSelectedTag();" class="btn btn-warning">Recalculate</a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="#" onclick="itms2.select($(this).closest('.item'));
+                                            return delSelectedTag();" class="btn btn-danger">Delete</a>
+                                </div>
+                            </div>
+
+                            <div class="item-footer row"></div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+        <script src="assets/items.js"></script>
+        <script type="text/javascript">
+                                        var itms, itms2;
+                                        $(function() {
+                                            itms = new items('#cats', {scope: "Selected cats "});
+                                            itms.onHasSelected(function() {
+                                                $(".hideOnEmptySelection").removeClass("hide");
+                                            });
+
+                                            itms.onHasNoSelected(function() {
+                                                $(".hideOnEmptySelection").addClass("hide");
+                                            });
+
+                                            itms2 = new items('#tags', {scope: "Selected tags "});
+                                            itms2.onHasSelected(function() {
+                                                $(".hideOnEmptySelection2").removeClass("hide");
+                                            });
+
+                                            itms2.onHasNoSelected(function() {
+                                                $(".hideOnEmptySelection2").addClass("hide");
+                                            });
+
+                                        });
+
+
+                                        function delSelectedCat() {
+                                            if (!confirm("Are you sure?"))
+                                                return false;
+
+                                            itms.getSelected(function(el) {
+                                                var id = $(el).data("id");
+
+                                                fake_ajax(function(resp) {
+                                                    itms.unselect(el);
+                                                    if (resp.status == 1)
+                                                        $(el).remove();
+
+
+                                                });
+
+                                            });
+
+                                            return false;
+                                        }
+
+                                        function recalcSelectedCat() {
+                                            itms.getSelected(function(el) {
+                                                var id = $(el).data("id");
+
+
+                                                fake_ajax(function(resp) {
+                                                    itms.unselect(el);
+                                                    $(el).find(".usages").html("Usages: " + Math.floor(Math.random() * (11)));
+
+                                                });
+
+                                            });
+
+                                            return false;
+                                        }
+
+                                        function delSelectedTag() {
+                                            if (!confirm("Are you sure?"))
+                                                return false;
+
+                                            itms2.getSelected(function(el) {
+                                                var id = $(el).data("id");
+
+                                                fake_ajax(function(resp) {
+                                                    itms2.unselect(el);
+                                                    if (resp.status == 1)
+                                                        $(el).remove();
+
+
+                                                });
+
+                                            });
+
+                                            return false;
+                                        }
+
+                                        function recalcSelectedTag() {
+                                            itms2.getSelected(function(el) {
+                                                var id = $(el).data("id");
+
+                                                fake_ajax(function(resp) {
+                                                    itms2.unselect(el);
+                                                    if (resp.status == 1)
+                                                        $(el).find(".usages").html("Usages: " + Math.floor(Math.random() * (11)));
+
+
+                                                });
+
+                                            });
+
+                                            return false;
+                                        }
+
+                                        function getAll() {
+                                            itms.getAllSelected(function(arr) {
+                                                var ids = [];
+                                                for (var i in arr) {
+                                                    ids.push(arr[i].data('id'))
+                                                }
+                                                
+                                                console.log(ids);
+                                            });
+                                            
+                                            itms.getAllSelectedAttr('id', function(arr){
+                                                console.log(arr);
+                                            });
+                                        }
+
+
+                                        function fake_ajax(cb) {
+                                            setTimeout(function(cb) {
+                                                cb({status: 1});
+                                            }, Math.random() * (1000 - 100) + 100, cb)
+                                        }
+
+        </script>
+
+
+    </body>
+</html>
