@@ -7,6 +7,7 @@ Minimalistic js library to manage items list.
 ```js
 var itms = new items();
 ```
+* add class item to listed elements.
 
 ### Using
 ```js
@@ -26,7 +27,7 @@ itms.onUnSelect(function() {
   //action on new onselected item
 });
 
-itms.getSelected(function(el) { /// this callback will be triggered on each selected item
+itms.getSelected(function(el) { // this callback will be triggered on each selected item
     var id = $(el).data("id"); //for example - get id of item from data-id
     
     fake_ajax(function(resp) {//send async query
@@ -35,5 +36,13 @@ itms.getSelected(function(el) { /// this callback will be triggered on each sele
             $(el).remove();//and remove it from list
     });
 
+});
+
+itms.getAllSelected(function(arr){
+    //arr is Array of $(element);
+});
+
+itms.getAllSelectedAttr('id', function(arr){
+    //arr is Array of value data-id of elements
 });
 ```
