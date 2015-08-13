@@ -7,7 +7,14 @@ Minimalistic js library to manage items list.
 ```js
 var itms = new items();
 ```
-* add class item to listed elements.
+* add class item to listed elements. For example:
+```html
+<div id='list1'>
+  <div class='item' data-id='1'>item 1</div>
+  <div class='item' data-id='2'>item 2</div>
+  <div class='item' data-id='3'>item 3</div>
+</div>
+```
 
 ### Methods
 ```js
