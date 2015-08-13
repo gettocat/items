@@ -9,7 +9,14 @@ var itms = new items();
 ```
 * add class item to listed elements.
 
-### Using
+### Methods
+```js
+itms.select(el); // select element
+itms.unselect(el); //remove selection on element 
+itms.selectAll(); //select all elements
+itms.unselectAll(); //remove selection from all elements
+```
+### Callbacks
 ```js
 itms.onHasSelected(function() {
   //action on one or more selected items
