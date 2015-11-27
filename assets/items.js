@@ -54,7 +54,7 @@ items.prototype = {
         var l2 = this.s("." + this.settings.active_item_class).length;
 
         if (this.f_onselect)
-            this.f_onselect;
+            this.f_onselect();
 
         this.s(this.settings.footer_selector).html(this.settings.scope + l2);
 
@@ -71,7 +71,7 @@ items.prototype = {
         var l2 = this.s("." + this.settings.active_item_class).length;
 
         if (this.f_onunselect)
-            this.f_onunselect;
+            this.f_onunselect();
 
         this.s(this.settings.footer_selector).html(this.settings.scope + l2);
 
